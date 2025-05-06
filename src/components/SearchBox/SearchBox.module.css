@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.input {
+  width: 260px;
+}

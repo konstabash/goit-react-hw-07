@@ -1,0 +1,32 @@
+/* .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  flex-basis: calc(100% / 4);
+  padding: 8px;
+  border-radius: 4px;
+} */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.contacts > li {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: start;
+}
+
+.icon {
+  margin: auto 0;
+}
+
+button {
+  padding: 4px;
+  margin: auto 0;
+}
