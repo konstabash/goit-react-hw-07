@@ -6,17 +6,11 @@ import {
   selectFilteredContacts,
   selectLoading,
 } from "../../redux/contactsSlice.js";
-import { selectNameFilter } from "../../redux/filtersSlice.js";
 
 const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
-  const filter = useSelector(selectNameFilter);
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
-
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
 
   return (
     <div className={s.container}>
@@ -24,7 +18,7 @@ const ContactList = () => {
       {error ? (
         <span>Server is dead</span>
       ) : (
-        filteredContacts.map(({ name, number, id }) => (
+        contacts.map(({ name, number, id }) => (
           <div className={s.contact} key={id}>
             <Contact name={name} number={number} id={id} />
           </div>
